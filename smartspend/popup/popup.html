@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartSpend</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="ss-header">
+    <div class="ss-brand">
+      <span class="ss-brand-dot"></span>
+      <span class="ss-brand-name">SmartSpend</span>
+    </div>
+    <nav class="ss-tabs">
+      <button class="ss-tab active" data-tab="prices">Prices</button>
+      <button class="ss-tab" data-tab="subs">Subscriptions</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tab-prices" class="ss-tab-panel active">
+      <div id="prices-list" class="ss-list"></div>
+      <div id="prices-empty" class="ss-empty" hidden>
+        <p><strong>No products tracked yet.</strong></p>
+        <p>Visit a product page and SmartSpend will start tracking its price automatically.</p>
+      </div>
+    </section>
+
+    <section id="tab-subs" class="ss-tab-panel">
+      <div class="ss-subs-summary" id="subs-summary" hidden>
+        <span>Estimated monthly spend</span>
+        <strong id="subs-total">$0.00</strong>
+      </div>
+
+      <div id="subs-list" class="ss-list"></div>
+      <div id="subs-empty" class="ss-empty" hidden>
+        <p><strong>No subscriptions tracked yet.</strong></p>
+        <p>Add one manually, or let SmartSpend detect trial/checkout pages for you.</p>
+      </div>
+
+      <button id="add-sub-btn" class="ss-btn-primary ss-full">+ Add subscription</button>
+
+      <form id="sub-form" class="ss-form" hidden>
+        <input type="text" id="f-name" placeholder="Name (e.g. Netflix)" required />
+        <div class="ss-form-row">
+          <input type="number" step="0.01" id="f-amount" placeholder="Amount" required />
+          <select id="f-currency">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <select id="f-cycle">
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+            <option value="weekly">Weekly</option>
+          </select>
+        </div>
+        <label class="ss-label">Next charge / trial end date</label>
+        <input type="date" id="f-date" required />
+        <input type="text" id="f-notes" placeholder="Notes (optional)" />
+        <div class="ss-form-actions">
+          <button type="submit" class="ss-btn-primary">Save</button>
+          <button type="button" id="cancel-sub-btn" class="ss-btn-ghost">Cancel</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="ss-footer-bar">
+    Your data stays on this device. Nothing is sent anywhere.
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

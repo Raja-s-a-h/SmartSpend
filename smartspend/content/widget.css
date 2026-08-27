@@ -1,0 +1,164 @@
+#smartspend-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#smartspend-widget .ss-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #113c3e;
+  color: #f4f1ea;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}
+
+#smartspend-widget .ss-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ss-good { background: #4caf7d; }
+.ss-warn { background: #e8a84a; }
+.ss-neutral { background: #9aa5a6; }
+
+#smartspend-widget .ss-card {
+  margin-top: 8px;
+  width: 240px;
+  background: #ffffff;
+  color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 14px;
+}
+
+#smartspend-widget .ss-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #113c3e;
+}
+
+#smartspend-widget .ss-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+}
+
+#smartspend-widget .ss-verdict {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#smartspend-widget .ss-verdict.ss-good { background: #4caf7d; }
+#smartspend-widget .ss-verdict.ss-warn { background: #e8a84a; color: #1a1a1a; }
+#smartspend-widget .ss-verdict.ss-neutral { background: #9aa5a6; }
+
+#smartspend-widget .ss-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+#smartspend-widget .ss-stats div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#smartspend-widget .ss-stats span { color: #666; }
+#smartspend-widget .ss-stats b { color: #1a1a1a; }
+
+#smartspend-widget .ss-sparkline {
+  width: 100%;
+  height: 46px;
+  display: block;
+  background: #f4f1ea;
+  border-radius: 8px;
+}
+
+#smartspend-widget .ss-footer {
+  margin-top: 8px;
+  font-size: 10px;
+  color: #999;
+  text-align: center;
+}
+
+/* ---------- Subscription banner ---------- */
+
+#smartspend-sub-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2147483647;
+  background: #113c3e;
+  color: #f4f1ea;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 380px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+#smartspend-sub-banner .ss-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+}
+
+#smartspend-sub-banner .ss-banner-text span {
+  color: #cdd7d6;
+  font-weight: 400;
+}
+
+#smartspend-sub-banner .ss-banner-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#smartspend-sub-banner .ss-btn-primary {
+  background: #e8a84a;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#smartspend-sub-banner .ss-btn-ghost {
+  background: transparent;
+  color: #cdd7d6;
+  border: 1px solid #3a5f60;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
